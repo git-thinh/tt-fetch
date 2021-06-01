@@ -12,10 +12,11 @@ const URL = require('url');
 const fs = require('fs');
 const lz4 = require('lz4');
 
-const express = require('express');
-const app = express();
 const http = require('http');
 const bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+
 const server = http.createServer(app);
 
 app.use(bodyParser.urlencoded({ extended: false }));
