@@ -2,7 +2,8 @@
 const __SETTING = require('./setting.json')[__ENV];
 console.log(__SETTING);
 
-const fetch = require('node-fetch');
+const fetch = require('node-fetch'); 
+env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 const Redis = require("ioredis");
 const redis = new Redis(__SETTING.REDIS_CONNECT);
